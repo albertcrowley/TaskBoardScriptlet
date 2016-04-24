@@ -173,10 +173,16 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+function addCloseButton() {
+	var click= 'jQuery("div#report").remove(); jQuery("a#report").remove(); ';
+	jQuery("div#report").after("<div><a id='report' onClick='"+click+"'>Close Task Board</a></div>")
+}
+
 jQuery.getScript("https://code.highcharts.com/highcharts.js", function() {
 	jQuery.getScript("https://code.highcharts.com/modules/exporting.js", function() {
 		jQuery.getScript("https://code.highcharts.com/modules/offline-exporting.js", function() {
 			startChart();
+			addCloseButton();
 		});
 	});
 });
