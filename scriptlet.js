@@ -174,5 +174,9 @@ function rgbToHex(r, g, b) {
 }
 
 jQuery.getScript("https://code.highcharts.com/highcharts.js", function() {
-	startChart();
+	jQuery.getScript("https://code.highcharts.com/modules/exporting.js", function() {
+		jQuery.getScript("https://code.highcharts.com/modules/offline-exporting.js", function() {
+			startChart();
+		});
+	});
 });
