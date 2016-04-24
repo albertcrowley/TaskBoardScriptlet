@@ -39,7 +39,7 @@ function startChart () {
         stati.push(row.status);
 
 
-        // check to see if any special conditions will set this row to a different category than the status would suggest
+        /* check to see if any special conditions will set this row to a different category than the status would suggest */
 
         row = checkForSpecialCase(row);
 
