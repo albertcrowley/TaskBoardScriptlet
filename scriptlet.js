@@ -1,4 +1,6 @@
-jQuery("document").ready(function () {
+
+
+function startChart () {
     var table = jQuery("#issuetable").first();
     var people = [];
     categories = ['NotReady', 'ReadyForDev', 'PeerReview', 'QA', 'Done'];
@@ -58,7 +60,7 @@ jQuery("document").ready(function () {
                     break;
                 case "Ready for Security Audit":
                     addToBucket(row, buckets, "Done", series, people);
-                    buckets.done.push(row);
+                    buckets.Done.push(row);
                     break;
                 default:
                     addToBucket(row, buckets, "NotReady", series, people);
@@ -76,7 +78,7 @@ jQuery("document").ready(function () {
 
     drawChart(categories, series);
 
-});
+};
 
 function addToBucket(row, buckets, category, series, people) {
     if (_.indexOf(people, row.assignee) == -1) {
@@ -110,6 +112,7 @@ function convertTime(time_string) {
 };
 
 function drawChart(categories, series) {
+	jQuery("body").prepend("<div id='report'></div>");
         jQuery('div#report').highcharts({
             chart: {
                 type: 'column'
@@ -169,3 +172,7 @@ function componentToHex(c) {
 function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
+
+jQuery.getScript("https://code.highcharts.com/highcharts.js", function() {
+	startChart();
+});
