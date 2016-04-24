@@ -1,8 +1,419 @@
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="scriptlet.js"></script>
     </head>
     <body>
         <div id="report"></div>
+        <hr/>
+        <div><div class="list-view"><div class="aui-group aui-group-split issue-table-info-bar"><div class="aui-item"><span class="results-count-text"><span class="results-count-start">1</span>–<span class="results-count-end">22</span> of <span class="results-count-total results-count-link">22</span></span><a href="#" class="refresh-table" title="Refresh results"><span class="aui-icon aui-icon-small aui-iconfont-refresh-small">Refresh results</span></a></div><div class="aui-item"><div class="column-picker-trigger-container"><button class="aui-button aui-button-subtle column-picker-trigger" title="Columns">Columns</button></div></div></div><div class="issue-table-container"><div><table id="issuetable"><thead><tr class="rowHeader"><th class="colHeaderLink sortable headerrow-issuetype" rel="issuetype:DESC" data-id="issuetype" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=issuetype&amp;sorter/order=DESC'">
+                                <span title="Sort By Issue Type">T</span>
+                            </th><th class="colHeaderLink sortable headerrow-issuekey" rel="issuekey:ASC" data-id="issuekey" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=issuekey&amp;sorter/order=ASC'">
+                                <span title="Sort By Key">Key</span>
+                            </th><th class="colHeaderLink sortable headerrow-priority" rel="priority:DESC" data-id="priority" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=priority&amp;sorter/order=DESC'">
+                                <span title="Sort By Priority">P</span>
+                            </th><th class="colHeaderLink sortable headerrow-summary" rel="summary:ASC" data-id="summary" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=summary&amp;sorter/order=ASC'">
+                                <span title="Sort By Summary">Summary</span>
+                            </th><th class="colHeaderLink sortable headerrow-status" rel="status:DESC" data-id="status" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=status&amp;sorter/order=DESC'">
+                                <span title="Sort By Status">Status</span>
+                            </th><th class="active sortable ascending headerrow-assignee" rel="assignee:DESC" data-id="assignee" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=assignee&amp;sorter/order=DESC'" title="Ascending order - Click to sort in descending order">
+                                    <span title="Sort By Assignee">Assignee</span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-up issuetable-header-sort-icon"></span>
+                                </th><th class="colHeaderLink sortable headerrow-components" rel="components:ASC" data-id="components" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=components&amp;sorter/order=ASC'">
+                                <span title="Sort By Component/s">Components</span>
+                            </th><th class="colHeaderLink sortable headerrow-customfield_10840" rel="customfield_10840:ASC" data-id="customfield_10840" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=customfield_10840&amp;sorter/order=ASC'">
+                                <span title="Sort By Tags">Tags</span>
+                            </th><th class="colHeaderLink sortable headerrow-timeoriginalestimate" rel="timeoriginalestimate:DESC" data-id="timeoriginalestimate" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=timeoriginalestimate&amp;sorter/order=DESC'">
+                                <span title="Sort By Original Estimate">Original Estimate</span>
+                            </th><th class="colHeaderLink sortable headerrow-timeestimate" rel="timeestimate:DESC" data-id="timeestimate" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=timeestimate&amp;sorter/order=DESC'">
+                                <span title="Sort By Remaining Estimate">Remaining Estimate</span>
+                            </th><th class="colHeaderLink sortable headerrow-fixVersions" rel="fixVersions:ASC" data-id="fixVersions" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=fixVersions&amp;sorter/order=ASC'">
+                                <span title="Sort By Fix Version/s">Fix Version/s</span>
+                            </th><th class="colHeaderLink sortable headerrow-timespent" rel="timespent:DESC" data-id="timespent" onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=timespent&amp;sorter/order=DESC'">
+                                <span title="Sort By Time Spent">Time Spent</span>
+                            </th><th class="colHeaderLink headerrow-actions">
+                    
+                </th></tr></thead><tbody><tr id="issuerow59581" rel="59581" data-issuekey="IEEUIT-2587" class="issuerow focused"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2587" href="/jira/browse/IEEUIT-2587" title="IEEUIT-2587" tabindex="-1"></a>     <a class="issue-link" data-issue-key="IEEUIT-2587" href="/jira/browse/IEEUIT-2587"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2587" href="/jira/browse/IEEUIT-2587">IEEUIT-2587</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/critical.png" height="16" width="16" border="0" align="absmiddle" alt="Critical" title="Critical - Essential services unavailable for all or most users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2587" href="/jira/browse/IEEUIT-2587">Cost Savings: modify API to handle nontyped fields</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A058094" id="assignee_A058094" href="/jira/secure/ViewProfile.jspa?name=A058094">Al Crowley(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15390" class="tinylink">Cost Savings</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59581-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">3h</td><td class="timeestimate">3h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59581" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59581/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59996" rel="59996" data-issuekey="IEEUIT-2668" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2668" href="/jira/browse/IEEUIT-2668" tabindex="-1" title="IEEUIT-2668"></a>     <a class="issue-link" data-issue-key="IEEUIT-2668" href="/jira/browse/IEEUIT-2668"> <img src="/jira/images/icons/issuetypes/task.png" height="16" width="16" border="0" align="absmiddle" alt="Task (Non-MAX)" title="Task (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2668" href="/jira/browse/IEEUIT-2668">IEEUIT-2668</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2668" href="/jira/browse/IEEUIT-2668">Research possiblity of creating an API layer between ITDB and Data Warehouse</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A058094" id="assignee_A058094" href="/jira/secure/ViewProfile.jspa?name=A058094">Al Crowley(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15890" class="tinylink">Data Warehouse</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59996-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+BY18_Changes" title="BY18_Changes"><span>BY18_Changes</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">6h</td><td class="timeestimate">6h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59996" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59996/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow60009" rel="60009" data-issuekey="IEEUIT-2673" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2673" href="/jira/browse/IEEUIT-2673" tabindex="-1" title="IEEUIT-2673"></a>     <a class="issue-link" data-issue-key="IEEUIT-2673" href="/jira/browse/IEEUIT-2673"> <img src="/jira/download/resources/com.atlassian.jira-core-project-templates:jira-issuetracking-item/subtask_alternate.png" height="16" width="16" border="0" align="absmiddle" alt="Sub-Task" title="Sub-Task - The sub-task of the issue"></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2673" href="/jira/browse/IEEUIT-2673">IEEUIT-2673</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                        <a class="issue-link parentIssue" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659" title="AGILE Dashboard Phase 1">IEEUIT-2659</a>
+                        <a class="issue-link" data-issue-key="IEEUIT-2673" href="/jira/browse/IEEUIT-2673">AGILE Dashboard Phase 1 API</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Development in Progress</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>Actively being worked by a developer</span>">Development in Progress</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A102458" id="assignee_A102458" href="/jira/secure/ViewProfile.jspa?name=A102458">David Stevenson(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15790" class="tinylink">Agile Dashboard</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-60009-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Parent_Approved" title="CCB_Parent_Approved"><span>CCB_Parent_Approved</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">8h</td><td class="timeestimate">8h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_60009" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/60009/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow60060" rel="60060" data-issuekey="IEEUIT-2675" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2675" href="/jira/browse/IEEUIT-2675" tabindex="-1" title="IEEUIT-2675"></a>     <a class="issue-link" data-issue-key="IEEUIT-2675" href="/jira/browse/IEEUIT-2675"> <img src="/jira/download/resources/com.atlassian.jira-core-project-templates:jira-issuetracking-item/subtask_alternate.png" height="16" width="16" border="0" align="absmiddle" alt="Sub-Task" title="Sub-Task - The sub-task of the issue"></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2675" href="/jira/browse/IEEUIT-2675">IEEUIT-2675</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                        <a class="issue-link parentIssue" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659" title="AGILE Dashboard Phase 1">IEEUIT-2659</a>
+                        <a class="issue-link" data-issue-key="IEEUIT-2675" href="/jira/browse/IEEUIT-2675">AGILE Dashboard Phase 1 Drupal</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A102458" id="assignee_A102458" href="/jira/secure/ViewProfile.jspa?name=A102458">David Stevenson(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15790" class="tinylink">Agile Dashboard</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-60060-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Parent_Approved" title="CCB_Parent_Approved"><span>CCB_Parent_Approved</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">6h</td><td class="timeestimate">6h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_60060" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/60060/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59385" rel="59385" data-issuekey="IEEUIT-2555" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2555" href="/jira/browse/IEEUIT-2555" tabindex="-1" title="IEEUIT-2555"></a>     <a class="issue-link" data-issue-key="IEEUIT-2555" href="/jira/browse/IEEUIT-2555"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2555" href="/jira/browse/IEEUIT-2555">IEEUIT-2555</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2555" href="/jira/browse/IEEUIT-2555">Review number format in tooltips and widgets for consistency in presentation</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A102458" id="assignee_A102458" href="/jira/secure/ViewProfile.jspa?name=A102458">David Stevenson(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59385-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">4h</td><td class="timeestimate">4h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59385" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59385/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59875" rel="59875" data-issuekey="IEEUIT-2641" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2641" href="/jira/browse/IEEUIT-2641" tabindex="-1" title="IEEUIT-2641"></a>     <a class="issue-link" data-issue-key="IEEUIT-2641" href="/jira/browse/IEEUIT-2641"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2641" href="/jira/browse/IEEUIT-2641">IEEUIT-2641</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2641" href="/jira/browse/IEEUIT-2641">DCOI: Resources tab content</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="a113825" id="assignee_a113825" href="/jira/secure/ViewProfile.jspa?name=a113825">Diego Ruiz(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15190" class="tinylink">DCOI</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59875-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">1h</td><td class="timeestimate">1h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59875" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59875/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59961" rel="59961" data-issuekey="IEEUIT-2652" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2652" href="/jira/browse/IEEUIT-2652" tabindex="-1" title="IEEUIT-2652"></a>     <a class="issue-link" data-issue-key="IEEUIT-2652" href="/jira/browse/IEEUIT-2652"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2652" href="/jira/browse/IEEUIT-2652">IEEUIT-2652</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2652" href="/jira/browse/IEEUIT-2652">DCOI: Updates to dataCenterTier validation rules</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Ready for Development</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>Ready to be picked up by developer</span>">Ready for Development</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="a110612" id="assignee_a110612" href="/jira/secure/ViewProfile.jspa?name=a110612">Janice Gallant(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15190" class="tinylink">DCOI</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59961-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">4h</td><td class="timeestimate">3h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent">1h</td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59961" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59961/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59994" rel="59994" data-issuekey="IEEUIT-2667" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2667" href="/jira/browse/IEEUIT-2667" tabindex="-1" title="IEEUIT-2667"></a>     <a class="issue-link" data-issue-key="IEEUIT-2667" href="/jira/browse/IEEUIT-2667"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2667" href="/jira/browse/IEEUIT-2667">IEEUIT-2667</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2667" href="/jira/browse/IEEUIT-2667">05B CMS: Ensure CMS edits are not overwritten by 05A node_exports</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="a110612" id="assignee_a110612" href="/jira/secure/ViewProfile.jspa?name=a110612">Janice Gallant(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59994-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">1h</td><td class="timeestimate">1h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59994" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59994/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59792" rel="59792" data-issuekey="IEEUIT-2622" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2622" href="/jira/browse/IEEUIT-2622" tabindex="-1" title="IEEUIT-2622"></a>     <a class="issue-link" data-issue-key="IEEUIT-2622" href="/jira/browse/IEEUIT-2622"> <img src="/jira/images/icons/issuetypes/bug.png" height="16" width="16" border="0" align="absmiddle" alt="Defect (Non-MAX)" title="Defect (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2622" href="/jira/browse/IEEUIT-2622">IEEUIT-2622</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2622" href="/jira/browse/IEEUIT-2622">Funding Source Data Feed: 2 fields blank for DOD records</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="O002233" id="assignee_O002233" href="/jira/secure/ViewProfile.jspa?name=O002233">Jose Mendez (OMB,Ctr) </a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59792-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">4h</td><td class="timeestimate">4h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59792" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59792/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59580" rel="59580" data-issuekey="IEEUIT-2586" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2586" href="/jira/browse/IEEUIT-2586" tabindex="-1" title="IEEUIT-2586"></a>     <a class="issue-link" data-issue-key="IEEUIT-2586" href="/jira/browse/IEEUIT-2586"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2586" href="/jira/browse/IEEUIT-2586">IEEUIT-2586</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/critical.png" height="16" width="16" border="0" align="absmiddle" alt="Critical" title="Critical - Essential services unavailable for all or most users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2586" href="/jira/browse/IEEUIT-2586">Cost Savings: modify data load to permit some noncorforming data</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="o002787" id="assignee_o002787" href="/jira/secure/ViewProfile.jspa?name=o002787">Kevin McKernin (OMB,Ctr) </a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15390" class="tinylink">Cost Savings</a>,                     <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59580-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">8h</td><td class="timeestimate">8h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/17593" class="tinylink">Data 1</a>,                     <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59580" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59580/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59565" rel="59565" data-issuekey="IEEUIT-2582" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2582" href="/jira/browse/IEEUIT-2582" tabindex="-1" title="IEEUIT-2582"></a>     <a class="issue-link" data-issue-key="IEEUIT-2582" href="/jira/browse/IEEUIT-2582"> <img src="/jira/images/icons/issuetypes/task.png" height="16" width="16" border="0" align="absmiddle" alt="Task (Non-MAX)" title="Task (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2582" href="/jira/browse/IEEUIT-2582">IEEUIT-2582</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2582" href="/jira/browse/IEEUIT-2582">BY18: Anytime - Update stored procedures to have "public" (user is public or logged in) parameter</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="o002787" id="assignee_o002787" href="/jira/secure/ViewProfile.jspa?name=o002787">Kevin McKernin (OMB,Ctr) </a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59565-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+BY18_Changes" title="BY18_Changes"><span>BY18_Changes</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_reviewed" title="CCB_reviewed"><span>CCB_reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">24h</td><td class="timeestimate">24h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59565" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59565/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow57656" rel="57656" data-issuekey="IEEUIT-2200" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2200" href="/jira/browse/IEEUIT-2200" tabindex="-1" title="IEEUIT-2200"></a>     <a class="issue-link" data-issue-key="IEEUIT-2200" href="/jira/browse/IEEUIT-2200"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2200" href="/jira/browse/IEEUIT-2200">IEEUIT-2200</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/minor.png" height="16" width="16" border="0" align="absmiddle" alt="Medium" title="Medium - Non-critical services unavailable to a subset of users, or an irritating bug.  Work around is available and can be communicated to users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2200" href="/jira/browse/IEEUIT-2200">Identify Missing Objects on MySQL Database and Commit to GIT</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>On Hold</span>">On Hold</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="O002537" id="assignee_O002537" href="/jira/secure/ViewProfile.jspa?name=O002537">Mark Pomponio (OMB,Ctr) </a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/11595" class="tinylink">Database</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <span class="labels" id="customfield_10840-57656-value">None</span>
+                </div>
+</td><td class="timeoriginalestimate">12h</td><td class="timeestimate">12h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/17593" class="tinylink">Data 1</a>,                     <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_57656" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/57656/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59678" rel="59678" data-issuekey="IEEUIT-2611" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2611" href="/jira/browse/IEEUIT-2611" tabindex="-1" title="IEEUIT-2611"></a>     <a class="issue-link" data-issue-key="IEEUIT-2611" href="/jira/browse/IEEUIT-2611"> <img src="/jira/images/icons/issuetypes/task.png" height="16" width="16" border="0" align="absmiddle" alt="Task (Non-MAX)" title="Task (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2611" href="/jira/browse/IEEUIT-2611">IEEUIT-2611</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/minor.png" height="16" width="16" border="0" align="absmiddle" alt="Medium" title="Medium - Non-critical services unavailable to a subset of users, or an irritating bug.  Work around is available and can be communicated to users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2611" href="/jira/browse/IEEUIT-2611">BY18: Provide preview interface to Data Warehouse for proof of concept</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="O002537" id="assignee_O002537" href="/jira/secure/ViewProfile.jspa?name=O002537">Mark Pomponio (OMB,Ctr) </a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59678-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+BY18_Changes" title="BY18_Changes"><span>BY18_Changes</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">8h</td><td class="timeestimate">8h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/17593" class="tinylink">Data 1</a>,                     <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59678" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59678/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow60085" rel="60085" data-issuekey="IEEUIT-2689" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2689" href="/jira/browse/IEEUIT-2689" tabindex="-1" title="IEEUIT-2689"></a>     <a class="issue-link" data-issue-key="IEEUIT-2689" href="/jira/browse/IEEUIT-2689"> <img src="/jira/images/icons/issuetypes/bug.png" height="16" width="16" border="0" align="absmiddle" alt="Defect (Non-MAX)" title="Defect (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2689" href="/jira/browse/IEEUIT-2689">IEEUIT-2689</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/minor.png" height="16" width="16" border="0" align="absmiddle" alt="Medium" title="Medium - Non-critical services unavailable to a subset of users, or an irritating bug.  Work around is available and can be communicated to users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2689" href="/jira/browse/IEEUIT-2689">Error bad gateway 500 when deactivating a metric actual</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A098808" id="assignee_A098808" href="/jira/secure/ViewProfile.jspa?name=A098808">Matthew Dunn(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-60085-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_For_Review" title="CCB_For_Review"><span>CCB_For_Review</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">2h</td><td class="timeestimate">2h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_60085" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/60085/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59866" rel="59866" data-issuekey="IEEUIT-2639" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2639" href="/jira/browse/IEEUIT-2639" tabindex="-1" title="IEEUIT-2639"></a>     <a class="issue-link" data-issue-key="IEEUIT-2639" href="/jira/browse/IEEUIT-2639"> <img src="/jira/images/icons/issuetypes/bug.png" height="16" width="16" border="0" align="absmiddle" alt="Defect (Non-MAX)" title="Defect (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2639" href="/jira/browse/IEEUIT-2639">IEEUIT-2639</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2639" href="/jira/browse/IEEUIT-2639">"Date of Last Successful Submission" is removed after a submission failure</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="A098808" id="assignee_A098808" href="/jira/secure/ViewProfile.jspa?name=A098808">Matthew Dunn(OMB)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15190" class="tinylink">DCOI</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59866-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">4h</td><td class="timeestimate">4h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59866" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59866/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow60010" rel="60010" data-issuekey="IEEUIT-2674" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2674" href="/jira/browse/IEEUIT-2674" tabindex="-1" title="IEEUIT-2674"></a>     <a class="issue-link" data-issue-key="IEEUIT-2674" href="/jira/browse/IEEUIT-2674"> <img src="/jira/download/resources/com.atlassian.jira-core-project-templates:jira-issuetracking-item/subtask_alternate.png" height="16" width="16" border="0" align="absmiddle" alt="Sub-Task" title="Sub-Task - The sub-task of the issue"></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2674" href="/jira/browse/IEEUIT-2674">IEEUIT-2674</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                        <a class="issue-link parentIssue" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659" title="AGILE Dashboard Phase 1">IEEUIT-2659</a>
+                        <a class="issue-link" data-issue-key="IEEUIT-2674" href="/jira/browse/IEEUIT-2674">AGILE Dashboard Phase 1 UI</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="a186935" id="assignee_a186935" href="/jira/secure/ViewProfile.jspa?name=a186935">Todd Messer(EOP)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15790" class="tinylink">Agile Dashboard</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-60010-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Parent_Approved" title="CCB_Parent_Approved"><span>CCB_Parent_Approved</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+%22UX%2FUI%22" title="UX/UI"><span>UX/UI</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">24h</td><td class="timeestimate">24h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_60010" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/60010/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59060" rel="59060" data-issuekey="IEEUIT-2475" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2475" href="/jira/browse/IEEUIT-2475" tabindex="-1" title="IEEUIT-2475"></a>     <a class="issue-link" data-issue-key="IEEUIT-2475" href="/jira/browse/IEEUIT-2475"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2475" href="/jira/browse/IEEUIT-2475">IEEUIT-2475</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/minor.png" height="16" width="16" border="0" align="absmiddle" alt="Medium" title="Medium - Non-critical services unavailable to a subset of users, or an irritating bug.  Work around is available and can be communicated to users.">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2475" href="/jira/browse/IEEUIT-2475">2016.05B UI Polishing for the whole site (parent ticket)</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">            <span class="tinylink"><a class="user-hover" rel="a186935" id="assignee_a186935" href="/jira/secure/ViewProfile.jspa?name=a186935">Todd Messer(EOP)</a></span>
+    </td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>,                     <a href="/jira/browse/IEEUIT/component/14990" class="tinylink">UI</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59060-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Parent_Approved" title="CCB_Parent_Approved"><span>CCB_Parent_Approved</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+%22UX%2FUI%22" title="UX/UI"><span>UX/UI</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">8h</td><td class="timeestimate">8h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59060" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59060/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59960" rel="59960" data-issuekey="IEEUIT-2651" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2651" href="/jira/browse/IEEUIT-2651" tabindex="-1" title="IEEUIT-2651"></a>     <a class="issue-link" data-issue-key="IEEUIT-2651" href="/jira/browse/IEEUIT-2651"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2651" href="/jira/browse/IEEUIT-2651">IEEUIT-2651</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2651" href="/jira/browse/IEEUIT-2651">XML Upload - research and resolve validation error for 422-000001361</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Ready for Code Review</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>Awaiting peer review by another developer</span>">Ready for Code Review</span>    </td><td class="assignee">    <em>Unassigned</em>
+</td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59960-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">6h</td><td class="timeestimate">1.5h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/17593" class="tinylink">Data 1</a>,                     <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent">4.5h</td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59960" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59960/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59975" rel="59975" data-issuekey="IEEUIT-2659" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659" tabindex="-1" title="IEEUIT-2659"></a>     <a class="issue-link" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659"> <img src="/jira/images/icons/issuetypes/improvement.png" height="16" width="16" border="0" align="absmiddle" alt="Feature (Non-MAX)" title="Feature (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659">IEEUIT-2659</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2659" href="/jira/browse/IEEUIT-2659">AGILE Dashboard Phase 1</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">    <em>Unassigned</em>
+</td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15790" class="tinylink">Agile Dashboard</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59975-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+Requirements_Reviewed" title="Requirements_Reviewed"><span>Requirements_Reviewed</span></a></li>
+                                                                                    <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+%22UX%2FUI%22" title="UX/UI"><span>UX/UI</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">0h</td><td class="timeestimate">0h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59975" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59975/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59997" rel="59997" data-issuekey="IEEUIT-2669" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2669" href="/jira/browse/IEEUIT-2669" tabindex="-1" title="IEEUIT-2669"></a>     <a class="issue-link" data-issue-key="IEEUIT-2669" href="/jira/browse/IEEUIT-2669"> <img src="/jira/images/icons/issuetypes/task.png" height="16" width="16" border="0" align="absmiddle" alt="Task (Non-MAX)" title="Task (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2669" href="/jira/browse/IEEUIT-2669">IEEUIT-2669</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/major.png" height="16" width="16" border="0" align="absmiddle" alt="High" title="High - Essential services unavailable to a subset of users (fewer than 10%) or non-critical services unavailable to all users. ">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2669" href="/jira/browse/IEEUIT-2669">Cost Savings: update OMB policy targets for each agency</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A newly created issue</span>">Open</span>    </td><td class="assignee">    <em>Unassigned</em>
+</td><td class="components">                        <a href="/jira/browse/IEEUIT/component/15390" class="tinylink">Cost Savings</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59997-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">4h</td><td class="timeestimate">4h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/17593" class="tinylink">Data 1</a>,                     <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent"></td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59997" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59997/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59800" rel="59800" data-issuekey="IEEUIT-2625" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2625" href="/jira/browse/IEEUIT-2625" tabindex="-1" title="IEEUIT-2625"></a>     <a class="issue-link" data-issue-key="IEEUIT-2625" href="/jira/browse/IEEUIT-2625"> <img src="/jira/images/icons/issuetypes/bug.png" height="16" width="16" border="0" align="absmiddle" alt="Defect (Non-MAX)" title="Defect (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2625" href="/jira/browse/IEEUIT-2625">IEEUIT-2625</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2625" href="/jira/browse/IEEUIT-2625">Investment Summary show more / show less sometimes show the wrong text</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Ready for Code Review</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>Awaiting peer review by another developer</span>">Ready for Code Review</span>    </td><td class="assignee">    <em>Unassigned</em>
+</td><td class="components">                        <a href="/jira/browse/IEEUIT/component/14690" class="tinylink">ITDB2</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59800-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">2h</td><td class="timeestimate">0h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent">2h</td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59800" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59800/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr><tr id="issuerow59993" rel="59993" data-issuekey="IEEUIT-2666" class="issuerow"><td class="issuetype"><a class="hidden-link issue-link" data-issue-key="IEEUIT-2666" href="/jira/browse/IEEUIT-2666" tabindex="-1" title="IEEUIT-2666"></a>     <a class="issue-link" data-issue-key="IEEUIT-2666" href="/jira/browse/IEEUIT-2666"> <img src="/jira/images/icons/issuetypes/bug.png" height="16" width="16" border="0" align="absmiddle" alt="Defect (Non-MAX)" title="Defect (Non-MAX) - "></a></td><td class="issuekey">
+
+    <a class="issue-link" data-issue-key="IEEUIT-2666" href="/jira/browse/IEEUIT-2666">IEEUIT-2666</a>
+</td><td class="priority">            <img src="/jira/images/icons/priorities/trivial.png" height="16" width="16" border="0" align="absmiddle" alt="Low" title="Low - Non-critical issues that do not impact core functionality (for example, misspelled words).">
+    </td><td class="summary"><p>
+                <a class="issue-link" data-issue-key="IEEUIT-2666" href="/jira/browse/IEEUIT-2666">Drupal security advisory SA-CONTRIB-2016-020</a>
+    </p>
+</td><td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Ready for QA Review</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>Code reviewed by another dev and approved</span>">Ready for QA Review</span>    </td><td class="assignee">    <em>Unassigned</em>
+</td><td class="components">                        <a href="/jira/browse/IEEUIT/component/11599" class="tinylink">Drupal</a>,                     <a href="/jira/browse/IEEUIT/component/12192" class="tinylink">Security</a>            </td><td class="customfield_10840">            <div class="labels-wrap value">
+            <ul class="labels" id="customfield_10840-59993-value">
+                                                        <li><a class="lozenge" href="/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=cf%5B10840%5D+%3D+CCB_Reviewed" title="CCB_Reviewed"><span>CCB_Reviewed</span></a></li>
+                                                    </ul>
+        </div>
+</td><td class="timeoriginalestimate">2h</td><td class="timeestimate">1.5h</td><td class="fixVersions">                        <a href="/jira/browse/IEEUIT/fixforversion/21791" class="tinylink">2016.05B</a>            </td><td class="timespent">0.5h</td><td class="issue_actions">    <a class="issue-actions-trigger aui-button aui-button-compact aui-button-subtle trigger-happy" id="actions_59993" title="Actions (Type . to access issue actions)" href="/jira/rest/api/1.0/issues/59993/ActionsAndOperations?atl_token=A69M-PTQT-OL7R-4OOS|4034eaea70743df1000b854fc933b4a92e9b3676|lin">
+        <span class="aui-icon aui-icon-small aui-iconfont-more">Actions</span>
+    </a>
+</td></tr></tbody></table></div></div><div class="end-of-stable-message"></div><div class="aui-group aui-group-split count-pagination"><div class="aui-item"><span class="results-count-text"><span class="results-count-start">1</span>–<span class="results-count-end">22</span> of <span class="results-count-total results-count-link">22</span></span><a href="#" class="refresh-table" title="Refresh results"><span class="aui-icon aui-icon-small aui-iconfont-refresh-small">Refresh results</span></a></div><div class="aui-item"><div class="pagination" data-displayable-total="22"></div></div></div></div></div>
     </body>
 </html>
