@@ -176,16 +176,19 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-function addCloseButton() {
+function addControls() {
 	var click= 'jQuery("div#report").remove(); jQuery("a#report").remove(); ';
-	jQuery("div#report").after("<div><a id='report' onClick='"+click+"'>Close Task Board</a></div>")
+	jQuery("div#report").after("<div><a id='report' onClick='" + click + "'>Close Task Board</a></div>")
+
+	click = 'var height = $("div#report").height() + 200; jQuery("div#report").height(height); setTimeout (function() {var chart = jQuery("div#report").highcharts(); chart.reflow();}, 100);'
+	jQuery("div#report").after("<div><a id='report' onClick='" + click + "'>Enlarge Task Board</a></div>")
 }
 
 jQuery.getScript("https://code.highcharts.com/highcharts.js", function() {
 	jQuery.getScript("https://code.highcharts.com/modules/exporting.js", function() {
 		jQuery.getScript("https://code.highcharts.com/modules/offline-exporting.js", function() {
 			startChart();
-			addCloseButton();
+			addControls();
 		});
 	});
 });
