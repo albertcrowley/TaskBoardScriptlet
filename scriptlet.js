@@ -69,12 +69,11 @@ function startChart () {
     });
 
 
-
+    /*
     console.log(categories);
     console.log(series);
-
     console.log(people);
-
+    */
 
     drawChart(categories, series);
 
@@ -98,7 +97,7 @@ function addToBucket(row, buckets, category, series, people) {
 function checkForSpecialCase(row) {
     var who = row.assignee.toLowerCase();
     if (who.indexOf("jose") > -1 || who.indexOf("tsitsi") > -1) {
-        console.log("fixing category for oddball element");
+        //console.log("fixing category for oddball element");
         row.status = "Assigned to a Non-Developer";
     }
 
@@ -140,10 +139,7 @@ function drawChart(categories, series) {
             tooltip: {
                 headerFormat: '<b>{point.x}</b><br/>',
                 formatter:  function() {
-                    
-                    console.log(series);
-                    
-                    return "i: " + this.series._i + "<br/>Title:<b>" + this.series.name + "</b><br/>Ticket#: " + series[this.series._i].issuekey + "<br/>Assigned: " + series[this.series._i].assignee + "<br>Status: " + series[this.series._i].status;
+                    return "Title:<b>" + this.series.name + "</b><br/>Ticket#: " + series[this.series._i].issuekey + "<br/>Assigned: " + series[this.series._i].assignee + "<br>Status: " + series[this.series._i].status;
                 }
             },
             plotOptions: {
@@ -155,6 +151,13 @@ function drawChart(categories, series) {
                         style: {
                             textShadow: '0 0 3px black'
                         }
+                    }
+                },
+                series: {
+                    cursor: 'pointer',
+                    stacking: 'normal',
+                    events: {
+                        click: function () { window.open("/jira/browse/" + this.options.issuekey, '_blank'); }
                     }
                 }
             },
