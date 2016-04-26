@@ -151,6 +151,7 @@ function drawChart(categories, series) {
                         style: {
                             textShadow: '0 0 3px black'
                         }
+                        /* don't think I want this ....but not sure ,formatter: function () { return "custom label for each block";} */
                     }
                 },
                 series: {
