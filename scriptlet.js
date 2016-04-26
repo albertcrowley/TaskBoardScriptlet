@@ -181,7 +181,7 @@ function addControls() {
 	var click= 'jQuery("div#report").remove(); jQuery("a#report").remove(); ';
 	jQuery("div#report").after("<div><a id='report' onClick='" + click + "'>Close Task Board</a></div>")
 
-	click = 'var height = $("div#report").height() + 200; jQuery("div#report").height(height); setTimeout (function() {var chart = jQuery("div#report").highcharts(); chart.reflow();}, 100);'
+	click = 'var height = jQuery("div#report").height() + 200; jQuery("div#report").height(height); setTimeout (function() {var chart = jQuery("div#report").highcharts(); chart.reflow();}, 100);'
 	jQuery("div#report").after("<div><a id='report' onClick='" + click + "'>Enlarge Task Board</a></div>")
 }
 
