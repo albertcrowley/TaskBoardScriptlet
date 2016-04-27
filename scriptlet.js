@@ -59,6 +59,10 @@ function startChart () {
                     addToBucket(row, buckets, "QA", series, people);
                     break;
                 case "Ready for Security Audit":
+                case "Ready for UAT Review":
+                case "Ready for Production":
+                case "In Production":
+                case "Closed":
                     addToBucket(row, buckets, "Done", series, people);
                     buckets.Done.push(row);
                     break;
@@ -87,10 +91,12 @@ function addToBucket(row, buckets, category, series, people) {
     var colorString = rgbToHex(colorTripple[0], colorTripple[1], colorTripple[2]);
     buckets[category].push(row);
     var stack =  (row.assignee.toLowerCase() == 'unassigned') ? "unassigned" : "assigned";
-    var data = [0, 0, 0, 0, 0];
+    var data = [null,null,null,null,null];
 
     data[_.indexOf(categories, category)] += convertTime(row.timeoriginalestimate);
     series.push({ name: row.summary, data: data, stack: stack, assignee: row.assignee, status: row.status, issuekey: row.issuekey, color: colorString });
+
+    //console.log("setting " + row.issuekey + " to category "+ category +".  It has status " + row.status);
 };
 
 
@@ -106,11 +112,15 @@ function checkForSpecialCase(row) {
 }
 
 function convertTime(time_string) {
-    return parseInt(time_string);
-
+    var time = parseInt(time_string);
+    if (time == 0) {
+        time = 1; //set to min of 1 so it shows in the graph
+    }
+    return time;
 };
 
 function drawChart(categories, series) {
+    //console.log(series);
 	jQuery("body").prepend("<div id='report'></div>");
         jQuery('div#report').highcharts({
             chart: {
