@@ -43,11 +43,12 @@ function startChart () {
 
         row = checkForSpecialCase(row);
 
-
             switch (row.status) {
                 case "Open":
                 case "Ready for Development":
                 case "Development in Progress":
+                case "Tech Review in Progress":
+                case "Needs More Work":
                     addToBucket(row, buckets, "ReadyForDev", series, people);
                     break;
                 case "Ready for Code Review":
@@ -60,12 +61,18 @@ function startChart () {
                     break;
                 case "Ready for Security Audit":
                 case "Ready for UAT Review":
+                case "Ready for Data QA":
+                case "Data QA in Progress":
                 case "Ready for Production":
+                case "Ready for Customer Review":
                 case "In Production":
                 case "Closed":
                     addToBucket(row, buckets, "Done", series, people);
                     buckets.Done.push(row);
                     break;
+                case "On Hold":
+                case "Needs Elaboration":
+                case "Elaboration in Progress":
                 default:
                     addToBucket(row, buckets, "NotReady", series, people);
                     break;
